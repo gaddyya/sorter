@@ -21,16 +21,16 @@ class Sorter {
   }
 
   sort(indices) {
-    var sortedArray = [];
+    let sortedArray = [];
     indices.sort();
       
-    for(var i = 0; i < indices.length; i++){
+    for(let i = 0; i < indices.length; i++){
         sortedArray[i] = this.array[indices[i]];
     }
     
     sortedArray.sort(this.compareFunction)
     
-    for(var i = 0; i < indices.length; i++){
+    for(let i = 0; i < indices.length; i++){
         this.array[indices[i]] = sortedArray[i];
     }
   }
